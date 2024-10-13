@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collabrify Interface</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            
+            <a href="../homepage.html"><h2>Collabrify</h2></a>
+            <button class="nav-button "id ="dashBoard">DashBoard</button>
+            <button class="nav-button "id ="quiz" >Quiz</button>
+            <button class="nav-button "id ="team">Team</button>
+            <button class="nav-button "id ="updates">Updates</button>
+            <button class="nav-button "id ="accountSetting">Account Setting</button>
+            <button class="logout-button">Logout</button>
+        </div>
+
+        <div class="main-content">
+            <div id="start-quiz-section" class="quiz-section">
+                <h2>Ready to Start the Quiz?</h2>
+                 <button id="start-quiz-button">Start Quiz</button>
+            </div>
+
+            <div id="quiz-section" class="quiz-section" style="display:none;">
+                <h2>Quiz</h2>
+
+                <form id="quiz-form">
+
+                    <div class="question">
+                        <h3>1. What is the first step when preparing for a presentation?</h3>
+                        <input type="radio" id="q1a1" name="q1" value="A">
+                        <label for="q1a1">Writing an outline</label><br>
+                        <input type="radio" id="q1a2" name="q1" value="B">
+                        <label for="q1a2">Deciding the purpose</label><br>
+                        <input type="radio" id="q1a3" name="q1" value="C">
+                        <label for="q1a3">Organizing handouts</label><br>
+                        <input type="radio" id="q1a4" name="q1" value="D">
+                        <label for="q1a4">Selecting the visuals</label><br>
+                    </div>
+                    
+                    <div class="question">
+                        <h3>2. Which of the following is the maximum number of main points an audience can typically remember from a presentation?</h3>
+                        <input type="radio" id="q2a1" name="q2" value="A">
+                        <label for="q2a1">Three</label><br>
+                        <input type="radio" id="q2a2" name="q2" value="B">
+                        <label for="q2a2">Four</label><br>
+                        <input type="radio" id="q2a3" name="q2" value="C">
+                        <label for="q2a3">Seven</label><br>
+                        <input type="radio" id="q2a4" name="q2" value="D">
+                        <label for="q2a4">Ten</label><br>
+                    </div>
+                    
+                    <div class="question">
+                        <h3>3. Why is it important to tailor your presentation to the audience?</h3>
+                        <input type="radio" id="q3a1" name="q3" value="A">
+                        <label for="q3a1">It reduces preparation time</label><br>
+                        <input type="radio" id="q3a2" name="q3" value="B">
+                        <label for="q3a2">It helps in delivering the presentation faster</label><br>
+                        <input type="radio" id="q3a3" name="q3" value="C">
+                        <label for="q3a3">It makes the content more relevant to them</label><br>
+                        <input type="radio" id="q3a4" name="q3" value="D">
+                        <label for="q3a4">It allows the use of complex language</label><br>
+                    </div>
+                    
+                    <div class="question">
+                        <h3>4. What technique is recommended for using during a presentation to stay on track?</h3>
+                        <input type="radio" id="q4a1" name="q4" value="A">
+                        <label for="q4a1">Memorizing the entire presentation</label><br>
+                        <input type="radio" id="q4a2" name="q4" value="B">
+                        <label for="q4a2">Reading from a script</label><br>
+                        <input type="radio" id="q4a3" name="q4" value="C">
+                        <label for="q4a3">Using keywords on index cards</label><br>
+                        <input type="radio" id="q4a4" name="q4" value="D">
+                        <label for="q4a4">Avoiding eye contact</label><br>
+                    </div>
+                    
+                    <div class="question">
+                        <h3>5. Which time of the week is considered ideal for giving a presentation?</h3>
+                        <input type="radio" id="q5a1" name="q5" value="A">
+                        <label for="q5a1">Monday morning</label><br>
+                        <input type="radio" id="q5a2" name="q5" value="B">
+                        <label for="q5a2">Friday afternoon</label><br>
+                        <input type="radio" id="q5a3" name="q5" value="C">
+                        <label for="q5a3">Thursday at 10 AM</label><br>
+                        <input type="radio" id="q5a4" name="q5" value="D">
+                        <label for="q5a4">Wednesday before lunch</label><br>
+                    </div>
+                    
+                    <div class="question">
+                        <h3>6. According to Albert Mehrabian, what percentage of impact comes from body language during a presentation?</h3>
+                        <input type="radio" id="q6a1" name="q6" value="A">
+                        <label for="q6a1">7%</label><br>
+                        <input type="radio" id="q6a2" name="q6" value="B">
+                        <label for="q6a2">55%</label><br>
+                        <input type="radio" id="q6a3" name="q6" value="C">
+                        <label for="q6a3">93%</label><br>
+                        <input type="radio" id="q6a4" name="q6" value="D">
+                        <label for="q6a4">80%</label><br>
+                    </div>
+                    
+                    <div class="question">
+                        <h3>7. What is NOT recommended when using visuals in a presentation?</h3>
+                        <input type="radio" id="q7a1" name="q7" value="A">
+                        <label for="q7a1">Using simple slides</label><br>
+                        <input type="radio" id="q7a2" name="q7" value="B">
+                        <label for="q7a2">Replacing the presenter with visuals</label><br>
+                        <input type="radio" id="q7a3" name="q7" value="C">
+                        <label for="q7a3">Presenting one slide every three minutes</label><br>
+                        <input type="radio" id="q7a4" name="q7" value="D">
+                        <label for="q7a4">Keeping the audience's attention on the presenter</label><br>
+                    </div>
+                    
+                    <div class="question">
+                        <h3>8. What is a good way to handle a "Monopoliser" in your audience?</h3>
+                        <input type="radio" id="q8a1" name="q8" value="A">
+                        <label for="q8a1">Let them continue talking</label><br>
+                        <input type="radio" id="q8a2" name="q8" value="B">
+                        <label for="q8a2">Politely ask them to stop</label><br>
+                        <input type="radio" id="q8a3" name="q8" value="C">
+                        <label for="q8a3">Break off eye contact and ask others for input</label><br>
+                        <input type="radio" id="q8a4" name="q8" value="D">
+                        <label for="q8a4">Ignore their comments</label><br>
+                    </div>
+                    
+                    <div class="question">
+                        <h3>9. What should you avoid when concluding a presentation?</h3>
+                        <input type="radio" id="q9a1" name="q9" value="A">
+                        <label for="q9a1">Introducing new ideas</label><br>
+                        <input type="radio" id="q9a2" name="q9" value="B">
+                        <label for="q9a2">Summarizing the main points</label><br>
+                        <input type="radio" id="q9a3" name="q9" value="C">
+                        <label for="q9a3">Being brief</label><br>
+                        <input type="radio" id="q9a4" name="q9" value="D">
+                        <label for="q9a4">Relating the ending to the introduction</label><br>
+                    </div>
+                    
+                    <div class="question">
+                        <h3>10. What should a presenter do if they don't know the answer to a question?</h3>
+                        <input type="radio" id="q10a1" name="q10" value="A">
+                        <label for="q10a1">Make up an answer</label><br>
+                        <input type="radio" id="q10a2" name="q10" value="B">
+                        <label for="q10a2">Say they will find out later</label><br>
+                        <input type="radio" id="q10a3" name="q10" value="C">
+                        <label for="q10a3">Ignore the question</label><br>
+                        <input type="radio" id="q10a4" name="q10" value="D">
+                        <label for="q10a4">Ask the audience to skip the question</label><br>
+                    </div>
+                           
+
+        <div class="submit-section">
+            <button type="submit">Submit Quiz</button>
+        </div>
+    </form>
+</div>
+
+<div id="result-section" class="quiz-section" style="display:none;">
+    <h2>Quiz Results</h2>
+    <div id="score"></div>
+    <div id="answers"></div>
+    <button id="continue-button">Continue</button>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            const correctAnswers = {
+    q1: 'B',  // Deciding the purpose
+    q2: 'C',  // Seven
+    q3: 'C',  // It makes the content more relevant to them
+    q4: 'C',  // Using keywords on index cards
+    q5: 'C',  // Thursday at 10 AM
+    q6: 'B',  // 55%
+    q7: 'B',  // Replacing the presenter with visuals
+    q8: 'C',  // Break off eye contact and ask others for input
+    q9: 'A',  // Introducing new ideas
+    q10: 'B'  // Say they will find out later
+};
+
+    
+            $('#start-quiz-button').click(function() {
+                $('#start-quiz-section').hide();
+                $('#quiz-section').show();
+            });
+    
+            $('#quiz-form').submit(function(event) {
+                event.preventDefault();
+    
+                let score = 0;
+                let totalQuestions = Object.keys(correctAnswers).length;
+                let resultsHtml = '';
+    
+                $.each(correctAnswers, function(question, correctAnswer) {
+                    const userAnswer = $(`input[name=${question}]:checked`).val();
+                    if (userAnswer === correctAnswer) {
+                        score++;
+                        resultsHtml += `<p >${question.toUpperCase()}:  Correct Answer - 1 point , Correct Answer - ${correctAnswer}</p> <br>` ;
+                        
+                    } else {
+                        resultsHtml += `<p >${question.toUpperCase()}: Incorrect Answer - 0 point , Correct Answer - ${correctAnswer}</p> <br>`; 
+                    }
+                });
+    
+                $('#score').html(`<h3>Your Score: ${score} / ${totalQuestions}</h3>`);
+                $('#answers').html(resultsHtml);
+    
+                $('#quiz-section').hide();
+                $('#result-section').show();
+            });
+    
+            $('#continue-button').click(function() {
+                alert('Continue button clicked!');
+            });
+        });
+    $(".nav-button").click(function () {
+           var buttonClicked = $(this).attr("id"); 
+           window.location.href=""+buttonClicked+".html";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="container">
+        <div class="sidebar">
+            <a href="../homepage.html"><h2>Collabrify</h2></a>
+            <button class="nav-button" id="dashBoard">Dashboard</button>
+            <button class="nav-button" id="quiz">Quiz</button>
+            <button class="nav-button" id="team">Team</button>
+            <button class="nav-button" id="updates">Updates</button>
+            <button class="nav-button" id="accountSetting">Account Setting</button>
+            <button class="logout-button">Logout</button>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="content">
+            <section class="hero-section" style="background-color:#d49f9a">
+                <h1 >Welcome to Your Learning</h1>
+                <p>Your academic journey starts here. Stay on track with your courses and progress.</p>
+                <button class="explore-courses">Explore Courses</button>
+            </section>
+
+            <div class="row">
+                <!-- Featured Courses Section -->
+                <div class="col">
+                    <h2 class="section-title">Featured Courses</h2>
+                    <div class="card">
+                        <h5>Introduction to AI</h5>
+                        <p>Learn the basics of Artificial Intelligence and its real-world applications.</p>
+                        <a href="#">Go to Course</a>
+                    </div>
+                    <div class="card">
+                        <h5>Web Development Bootcamp</h5>
+                        <p>Master full-stack web development with hands-on projects.</p>
+                        <a href="#">Go to Course</a>
+                    </div>
+                </div>
+
+                <!-- Recent Announcements Section -->
+                <div class="col">
+                    <div class="announcement">
+                        <h5>Project Submission Deadline</h5>
+                        <p>The deadline for the Web Development project has been extended to October 15, 2024.</p>
+                    </div>
+                    <div class="announcement">
+                        <h5>New Course Available: Data Science</h5>
+                        <p>We are excited to introduce a new course on Data Science starting this semester. Enroll now!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Metrics Section -->
+            <div class="row">
+                <div class="col">
+                    <h2 class="section-title">Your Performance</h2>
+                    <div class="metrics">
+                        <ul>
+                            <li>Assignments Completed: 12/15</li>
+                            <li>Current GPA: 3.8</li>
+                            <li>Courses Completed: 3/5</li>
+                            <li>Upcoming Deadlines: 2</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer>
+                <p>&copy; 2024 Student Dashboard. All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   
+<script>
+
+        $(".nav-button").click(function () {
+           var buttonClicked = $(this).attr("id"); 
+           window.location.href=""+buttonClicked+".html";
+        });
+        $("#save-changes-button").click(function () {
+           alert ("Changes are made succesfully") ;
+        });
+    </script>
+</body>
+</html>

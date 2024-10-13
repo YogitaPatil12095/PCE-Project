@@ -1,0 +1,212 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit; /* Prevent default blue link color */
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #eec2bf;
+    height: 100vh;
+    margin: 0;
+    width: 100vw; /* Full width of the viewport */
+    display: flex; /* Flexbox layout for full-height */
+    flex-direction: column;
+  }
+  
+  /* Main Container */
+  .container {
+    display: flex;
+    flex-grow: 1; /* Container should take the full height */
+    background-color: #d49f9a;
+  }
+  
+  /* Sidebar Styling */
+  .sidebar {
+    background-color: #d49f9a;
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* So the logout button is positioned correctly */
+  }
+  
+  .sidebar h2 {
+    color: #884f58;
+    margin-bottom: 40px;
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  .nav-button {
+    background-color: #7f5b7e;
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    text-align: left;
+    margin-bottom: 30px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-button:hover {
+    background-color: #6a486a;
+  }
+  
+  .logout-button {
+    background-color: #af706d;
+    color: white;
+    border: none;
+    padding: 15px 80px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+  
+  .logout-button:hover {
+    background-color: #9a5956;
+  }
+  
+  /* Main Content Area */
+  .content {
+    flex-grow: 1; /* Main content should take remaining space */
+    padding-right: 200px;
+    padding-left: 200px;
+    padding-top: 20px;
+    overflow-y: auto;
+    background-color: #eec2bf;
+  }
+  
+  .hero-section {
+    background-color: #DFB6B2;
+    padding: 3rem;
+    text-align: center;
+    color: #190019;
+  }
+  
+  .hero-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #190019;
+  }
+  
+  .hero-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-section button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .hero-section button:hover {
+    background-color: #555;
+  }
+  
+  /* Featured Courses Section */
+  .section-title {
+    font-size: 24px;
+    color: #854F6C;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card {
+    background-color: #62255B;
+    color: #FBE4D8;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  
+  .card h5 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #FBE4D8;
+  }
+  
+  .card p {
+    margin-bottom: 15px;
+  }
+  
+  .card a {
+    background-color: #FFF;
+    color: #62255B;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s;
+  }
+  
+  .card a:hover {
+    background-color: #EDEDED;
+  }
+  
+  /* Announcement Section */
+  .announcement {
+    background-color: #854F6C;
+    color: #FBE4D8;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  
+  .announcement h5 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .announcement p {
+    font-size: 16px;
+  }
+  
+  /* Performance Metrics Section */
+  .metrics {
+    background-color: #190019;
+    color: #FBE4D8;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .metrics ul {
+    list-style-type: none;
+  }
+  
+  .metrics li {
+    background-color: #333;
+    color: #FBE4D8;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #2B124C;
+    color: #FBE4D8;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  

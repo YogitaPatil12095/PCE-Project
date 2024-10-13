@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams Dashboard</title>
+    
+    <style>
+        body {
+            background-color: #FBE4D8;
+            color: #190019;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #2B124C;
+            padding: 1rem;
+            color: #FBE4D8;
+            text-align: center;
+        }
+
+        .dashboard-header {
+            background-color: #DFB6B2;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .dashboard-header h1 {
+            margin: 0;
+        }
+
+        .dashboard-header p {
+            margin: 10px 0;
+        }
+
+        .dashboard-header input {
+            margin-bottom: 10px;
+            padding: 8px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .dashboard-header button {
+            background-color: #190019;
+            color: #FBE4D8;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dashboard-header button:hover {
+            background-color: #2B124C;
+        }
+
+        .sidebar {
+            background-color: #d49f9a;
+            width: 250px;
+            padding: 20px;
+            position: fixed;
+            height: 100vh;
+        }
+
+        .sidebar h2 {
+            color: #884f58;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .nav-button {
+            background-color: #7f5b7e;
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 10px;
+            text-align: left;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        .nav-button:hover {
+            background-color: #6a486a;
+        }
+
+        .logout-button {
+            background-color: #af706d;
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 10px;
+            margin-top: 40px;
+            width: 100%;
+        }
+
+        .logout-button:hover {
+            background-color: #9a5956;
+        }
+
+        .main-content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #62255B;
+            color: #FBE4D8;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .card h5 {
+            margin-bottom: 15px;
+        }
+
+        .list-group {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .list-group-item {
+            background-color: #854F6C;
+            margin-bottom: 5px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button.add-button {
+            background-color: #190019;
+            color: #FBE4D8;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button.add-button:hover {
+            background-color: #2B124C;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #FBE4D8;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #2B124C;
+            color: #FBE4D8;
+        }
+
+        table tr:nth-child(odd) {
+            background-color: #190019;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #62255B;
+        }
+
+        table .badge {
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        table .badge-warning {
+            background-color: orange;
+        }
+
+        table .badge-success {
+            background-color: green;
+        }
+
+        table .badge-danger {
+            background-color: red;
+        }
+
+        footer {
+            background-color: #2B124C;
+            color: #FBE4D8;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            margin: auto;
+            max-width: 1200px;
+        }
+        body {
+            background-color: #FBE4D8;
+            color: #190019;
+        }
+
+        .navbar {
+            background-color: #2B124C;
+        }
+
+        .navbar-brand, .nav-link {
+            color: #FBE4D8 !important;
+        }
+
+        .dashboard-header {
+            background-color: #DFB6B2;
+            padding: 2rem;
+            text-align: center;
+            color: #190019;
+        }
+
+        .card {
+            background-color: #62255B;
+            color: #FBE4D8;
+            
+        }
+
+        .card-title {
+            color: #854F6C;
+        }
+
+        .metrics {
+            background-color: #190019;
+            color: #FBE4D8;
+        }
+
+        footer {
+            background-color: #2B124C;
+            color: #FBE4D8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="../homepage.html"><h2>Collabrify</h2></a>
+        <button class="nav-button" id="dashBoard">Dashboard</button>
+        <button class="nav-button" id="quiz">Quiz</button>
+        <button class="nav-button" id="team">Team</button>
+        <button class="nav-button" id="updates">Updates</button>
+        <button class="nav-button" id="accountSetting">Account Setting</button>
+        <button class="logout-button">Logout</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <!-- Dashboard Header -->
+        <div class="dashboard-header">
+            <h1>Welcome to Your Team</h1>
+            <p id="dashboard-subtitle">Monitor progress, collaborate efficiently, and manage tasks in real-time.</p>
+            <input type="text" id="dashboard-subtitle-input" placeholder="Change subtitle here">
+            <button onclick="changeSubtitle()">Update Subtitle</button>
+        </div>
+
+        <!-- Team Members Section -->
+        <div class="card">
+            <h5>Team Members</h5>
+            <ul class="list-group" id="team-members">
+                <li class="list-group-item">Yogita Patil</li>
+                <li class="list-group-item">Amruta Patil</li>
+                <li class="list-group-item">Ved Patil</li>
+                <li class="list-group-item">Darshana Sonawane</li>
+               
+            </ul>
+            <input type="text" id="new-member" placeholder="Add a new team member">
+            <button class="add-button" onclick="addMember()">Add Member</button>
+        </div>
+
+        <!-- Tasks Section -->
+        <div class="card">
+            <h5>Current Tasks</h5>
+            <ul class="list-group" id="task-list">
+                <li class="list-group-item">Complete Project A</li>
+                <li class="list-group-item">Prepare for Client Meeting</li>
+                <li class="list-group-item">Design UI for Mobile App</li>
+                <li class="list-group-item">Review Marketing Strategy</li>
+            </ul>
+            <input type="text" id="new-task" placeholder="Add a new task">
+            <button class="add-button" onclick="addTask()">Add Task</button>
+        </div>
+
+        <!-- Performance Metrics Section -->
+        <div class="card">
+            <h5>Performance Metrics</h5>
+            <ul class="list-group">
+                <li class="list-group-item">Task Completion: 80%</li>
+                <li class="list-group-item">Overall Progress: 65%</li>
+                <li class="list-group-item">Upcoming Deadlines: 3</li>
+            </ul>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="card">
+            <h5>Ongoing Projects</h5>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Project</th>
+                        <th>Status</th>
+                        <th>Deadline</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Website Redesign</td>
+                        <td><span class="badge badge-warning">In Progress</span></td>
+                        <td>Oct 15, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile App Development</td>
+                        <td><span class="badge badge-success">Completed</span></td>
+                        <td>Sept 30, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Marketing Strategy</td>
+                        <td><span class="badge badge-danger">Delayed</span></td>
+                        <td>Oct 5, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Team Dashboard. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to change the dashboard subtitle
+        function changeSubtitle() {
+            const newSubtitle = document.getElementById('dashboard-subtitle-input').value;
+            if (newSubtitle) {
+                document.getElementById('dashboard-subtitle').innerText = newSubtitle;
+            }
+        }
+
+        // Function to add a new team member
+        function addMember() {
+            const newMember = document.getElementById('new-member').value;
+            if (newMember) {
+                const list = document.getElementById('team-members');
+                const listItem = document.createElement('li');
+                listItem.className = 'list-group-item';
+                listItem.innerText = newMember;
+                list.appendChild(listItem);
+                document.getElementById('new-member').value = ''; // Clear input
+            }
+        }
+
+        // Function to add a new task
+        function addTask() {
+            const newTask = document.getElementById('new-task').value;
+            if (newTask) {
+                const list = document.getElementById('task-list');
+                const listItem = document.createElement('li');
+                listItem.className = 'list-group-item';
+                listItem.innerText = newTask;
+                list.appendChild(listItem);
+                document.getElementById('new-task').value = ''; // Clear input
+            }
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   
+<script>
+
+        $(".nav-button").click(function () {
+           var buttonClicked = $(this).attr("id"); 
+           window.location.href=""+buttonClicked+".html";
+        });
+        $("#save-changes-button").click(function () {
+           alert ("Changes are made succesfully") ;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./registrationStyles.css">
+    <link rel="icon" href="/homePage/logo/logo.ico" type="image/x-icon">
+
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="./homePage/logo/logo.jpg" alt="Collabrify Logo">
+        </div>
+        <div class="login-box">
+            <h1>LOGIN</h1>
+            <br>
+            <form>
+                <label for="username">UserName</label>
+                <input type="text" id="username" placeholder="username">
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="password">
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="email">
+                <br>
+                <div class="buttons">
+                    
+                        <button type="submit">Submit</button>
+
+                   
+                    <a href="./Registration.html">
+                     <button type="button"  >Registration</button>
+                      </a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const email = document.getElementById('email').value.trim();
+
+        
+        if (!email || !username || !password ) {
+            alert('All fields must be filled out!');
+            return;
+        }
+        window.location.href = "./homepage/homepage.html";
+    });
+        </script>
+</body>
+</html>

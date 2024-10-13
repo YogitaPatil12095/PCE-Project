@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collabrify Interface</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>/* Global style */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Account Settings Section */
+        .account-settings {
+            background-color: #7f5b7e; /* Dark purple background */
+            padding: 30px;
+            border-radius: 8px;
+            width: 40%;
+            margin: auto;
+            color: white;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #f1d1d1; /* Light pinkish color */
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        
+        .input-field {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: inline-block;
+            width: 120px;
+            font-size: 18px;
+        }
+        
+        input[type="text"], input[type="password"], input[type="email"],input[type="tel"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 65%;
+            background-color: #f1d1d1; /* Light pinkish color */
+            color: #7f5b7e; /* Dark purple text color */
+            font-size: 16px;
+        }
+        
+        input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+            outline: none;
+            box-shadow: 0 0 5px #884f58; /* Focused outline effect */
+        }
+        
+        #save-changes-button {
+            background-color: #884f58; 
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto 0 auto;
+        }
+        
+        #save-changes-button:hover {
+            background-color: #6a486a; 
+        }
+        
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <a href="../homepage.html"><h2>Collabrify</h2></a>
+            <button class="nav-button "id ="dashBoard">DashBoard</button>
+            <button class="nav-button "id ="quiz" >Quiz</button>
+            <button class="nav-button "id ="team">Team</button>
+            <button class="nav-button "id ="updates">Updates</button>
+            <button class="nav-button "id ="accountSetting">Account Setting</button>
+            <button class="logout-button">Logout</button>
+        </div>
+
+        <div class="main-content">
+           
+            <div id="account-settings-section" class="account-settings">
+                <h2>Account Settings</h2>
+                <form id="account-settings-form">
+                    <div class="input-field">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" placeholder="Name">
+                    </div>
+                    <div class="input-field">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" placeholder="Username">
+                    </div>
+                    <div class="input-field">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" placeholder="Password">
+                    </div>
+                    <div class="input-field">
+                        <label for="phone">Phone No:</label>
+                        <input type="tel" id="phone" maxlength="10" pattern="[0-9]{10}" id="username" placeholder="Phone No">
+                    </div>
+                    <div class="input-field">
+                        <label for="email">Mail ID:</label>
+                        <input type="email" id="email" placeholder="Mail ID">
+                    </div>
+                    <button type="submit" id="save-changes-button">Save Changes</button>
+                </form>
+            </div>
+            
+        
+        
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   
+<script>
+
+        $(".nav-button").click(function () {
+           var buttonClicked = $(this).attr("id"); 
+           window.location.href=""+buttonClicked+".html";
+        });
+        $("#save-changes-button").click(function () {
+           alert ("Changes are made succesfully") ;
+        });
+    </script>
+</body>
+</html>
